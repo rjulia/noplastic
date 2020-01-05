@@ -1,11 +1,14 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "nomoreplastic",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Testin my own knollagues",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ramon Julia",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "engines": {
+    "node": "10.15.0"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
@@ -54,6 +57,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "heroku-postbuild": "gatsby build",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
