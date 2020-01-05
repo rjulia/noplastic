@@ -59,7 +59,7 @@ export const pageQuery = graphql`
       filter: {
         node_locale: {eq: "es-ES"}
       },
-      sort: {fields: [updatedAt], order: DESC }
+      sort: {fields: updatedAt, order: DESC }
       
     ) {
       edges {

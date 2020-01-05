@@ -3,7 +3,7 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/obra.js`)
+  const obrasPost = path.resolve(`./src/templates/obra.js`)
   const result = await graphql(
     `
       {
@@ -12,12 +12,7 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               slug
               title
-              description {
-                json
-                content {
-                  nodeType
-                }
-              }
+
             }
           }
         }
@@ -38,7 +33,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: post.node.slug,
-      component: blogPost,
+      component: obrasPost,
       context: {
         slug: post.node.slug,
         previous,
